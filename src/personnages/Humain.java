@@ -19,7 +19,7 @@ public class Humain {
 		this.quantiteArgent = quantiteArgent;
 	}
 
-	private void parler(String texte) {
+	protected void parler(String texte) {
 		System.out.println("(" + nom + ") - " + texte);
 	}
 
@@ -31,11 +31,11 @@ public class Humain {
 		parler("Mmmm, un bon verre de " + boissonFavorite + " ! GLOUPS !");
 	}
 	
-	private void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		quantiteArgent += gain;
 	}
 	
-	private void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		quantiteArgent -= perte;
 		if (quantiteArgent < 0) {
 			quantiteArgent = 0;
